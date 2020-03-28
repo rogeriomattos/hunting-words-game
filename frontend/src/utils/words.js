@@ -1,0 +1,28 @@
+const words =[
+    'Apneia',
+    'Dermatite',
+    'Flictema',
+    'Intravenoso',
+    'Taquipneia',
+    'Urticária',
+    'Apneia',
+    'Dermatite',
+    'Flictema',
+    'Intravenoso',
+    'Taquipneia',
+    'Urticária',
+    'Apneia',
+    'Dermatite',
+    'Flictema',
+    'Intravenoso',
+    'Taquipneia',
+    'Urticária',
+    'Apneia',
+    'Dermatite',
+    'Flictema',
+    'Intravenoso',
+    'Taquipneia',
+    'Urticária',
+];
+
+export default words;
