@@ -33,6 +33,21 @@
 
 }
 
+.main-container button{
+    margin: 24px auto 0 auto;
+    border: rgb(52, 72, 187) 2px solid;
+    background: rgb(52, 115, 187);
+    padding: 10px 30px;
+    text-align: center;
+    color: #fff;
+    border-radius: 8px;
+    display: block;
+}
+
+.main-container button:hover{
+    opacity: 0.8;
+}
+
 .main-container .words{
     max-width: 60%;
     margin: 24px auto auto;
@@ -67,6 +82,7 @@
     width: 50px;
     height: 50px;
     text-align: center;
+    text-transform: uppercase;
 }
 
 .main-container  .word-board ul li:hover{
