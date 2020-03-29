@@ -85,7 +85,18 @@
     text-transform: uppercase;
 }
 
+.main-container  .word-board ul li.selected{
+    background: rgb(122, 122, 122);
+    color: #fff;
+}
+
+.main-container  .word-board ul li.selected:hover{
+    background: rgb(122, 122, 122);
+    color: #fff;
+}
+
 .main-container  .word-board ul li:hover{
     background: #ccc;
 }
+
 

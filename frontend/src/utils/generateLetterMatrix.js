@@ -17,10 +17,12 @@ export default function generateLetterMatrix(column, row, words){
         let row = [];
 
         for(let j = 0; j < column; j++)
-            row.push(alphabet[getRandomInt(0, 25)]);
+            row.push({'row':i, 'column': j, 'selected': false, 'letter': alphabet[getRandomInt(0, 25)]});
 
         matrix.push(row);
     }
+    console.log("generateLetterMatrix:");
+    console.log(matrix);
 
     matrix = addWordsInMatrix(matrix, words);
 

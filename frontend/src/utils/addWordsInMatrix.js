@@ -24,7 +24,7 @@ function addWordHorizontalInMatrix(matrix, word){
     let index = 0;
     for(let j = column; j < column + word.length; j++){
             
-        matrix[row][j] = word[index];
+        matrix[row][j] = {'row':row, 'column': j, 'selected': false, 'letter': word[index].toUpperCase()} ;
         
         index++;
 
