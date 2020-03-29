@@ -3,100 +3,33 @@
     max-width: 1180px;
     padding: 0 30px;
     margin: 32px auto;
-}
-
-.main-container header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.main-container .configuration-group{
-    margin-top: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.main-container .configuration-group label{
-    color: rgb(73, 73, 73);
-    margin-right: 10px;
-    font-size: 18;
-}
-
-.main-container .configuration-group input{
-    padding: 5px 10px;
-    margin-right: 40px;
+    text-align: center;
 }
 
 .main-container h1{
-
-}
-
-.main-container button{
-    margin: 24px auto 0 auto;
-    border: rgb(52, 72, 187) 2px solid;
-    background: rgb(52, 115, 187);
-    padding: 10px 30px;
-    text-align: center;
-    color: #fff;
-    border-radius: 8px;
-    display: block;
-}
-
-.main-container button:hover{
-    opacity: 0.8;
-}
-
-.main-container .words{
-    max-width: 60%;
-    margin: 24px auto auto;
-    text-align: center;
-}
-.main-container .words span{
-    margin: 0 10px;
-    font-size: 18px;
-    line-height: 28px;
-    cursor: default;
-    display: inline-block;
-}
-
-.main-container .word-board{
-    width: 100%;
     margin-top: 24px;
 }
+.main-container p{
+    margin-top: 24px;
+    font-size: 18px;
+}
 
-.main-container  .word-board ul{
+.main-container ul{
     list-style: none;
     display: flex;
+    margin: 0 auto;
     align-items: center;
     justify-content: center;
+    margin-top: 60px;
+}
+.main-container ul li{
+    background: rgb(155, 247, 119);
+    border: solid 1px rgb(136, 216, 105);
+    padding: 10px 30px;
+    font-size: 25px;
 }
 
-.main-container  .word-board ul li{
-    font-size: 16px;
-    cursor: pointer;
-    user-select: none;
-    box-sizing: border-box;
-    line-height: 50px;
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    text-transform: uppercase;
+.main-container ul li a{
+    text-decoration: none;
 }
-
-.main-container  .word-board ul li.selected{
-    background: rgb(122, 122, 122);
-    color: #fff;
-}
-
-.main-container  .word-board ul li.selected:hover{
-    background: rgb(122, 122, 122);
-    color: #fff;
-}
-
-.main-container  .word-board ul li:hover{
-    background: #ccc;
-}
-
 

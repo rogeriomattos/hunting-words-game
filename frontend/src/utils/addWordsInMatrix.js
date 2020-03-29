@@ -10,21 +10,21 @@ export default function addWordsInMatrix(matrix, words){
     positionsUsedBefore = [];
 
     for(let index in words){
-        matrix = addWordHorizontalInMatrix(matrix, words[index]);
+        matrix = addWordHorizontalInMatrix(matrix, words[index].word, index);
     }    
 
     return matrix;
 }
 
 
-function addWordHorizontalInMatrix(matrix, word){
-
+function addWordHorizontalInMatrix(matrix, word, wordIndex){
+    console.log("addWordHorizontalInMatrix");
     const {column, row} = getPositionInMatrix(matrix[0].length, matrix.length, word.length, 'addWordHorizontalInMatrix');
 
     let index = 0;
     for(let j = column; j < column + word.length; j++){
             
-        matrix[row][j] = {'row':row, 'column': j, 'selected': false, 'letter': word[index].toUpperCase()} ;
+        matrix[row][j] = {'row':row, 'column': j, 'selected': false, 'letter': word[index].toUpperCase(), 'word': word, 'wordIndex': wordIndex} ;
         
         index++;
 

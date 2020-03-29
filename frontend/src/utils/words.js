@@ -1,10 +1,15 @@
-const words =[
-        'Apneia',
-        'Dermatite',
-        'Flictema',
-        'Intravenoso',
-        'Taquipneia',
-        'Urticária',
-    ];
+const wordsText = [
+    'Apneia',
+    'Dermatite',
+    'Flictema',
+    'Intravenoso',
+    'Taquipneia',
+    'Urticária',
+]
 
-export default words;
+const words = wordsText.map((word) => ({
+    'word': word, 
+    'isFinded': false
+}));
+
+export default function getWords(){ return words;};
