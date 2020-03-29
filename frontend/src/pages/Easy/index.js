@@ -88,8 +88,6 @@ export default class Easy extends Component{
            
     }
 
-    
-
     selectLetter = (indexRow, indexColumn) =>{
         const { matrix } = this.state;
 
