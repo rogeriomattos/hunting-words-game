@@ -4,15 +4,13 @@ import './styles.css';
 
 import getWords from '../../utils/words';
 
-import generateLetterMatrix from '../../utils/generateLetterMatrix'
-
 import * as huntWord  from 'hunting-words';
 
 export default class Easy extends Component{
     
     state ={
         column: 30,
-        row: 30,
+        row: 12,
         matrix: [],
         positionSelected: [],
         words: []
@@ -44,7 +42,7 @@ export default class Easy extends Component{
         const { row, column } = this.state;
         
         this.setState({
-            matrix: generateLetterMatrix(column, row, getWords()),
+            matrix: huntWord.create(getWords().map((el) =>{return el.word}), row, column),
         });
         this.cleanWords();
     }
