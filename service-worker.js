@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/hunting-words-game/precache-manifest.36e68f87f9e1e259d6ff68032ab23f62.js"
+  "/hunting-words-game/precache-manifest.61c8b1661b5c25d88d2efa6152ed714e.js"
 );
 
 self.addEventListener('message', (event) => {
