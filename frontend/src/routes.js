@@ -8,7 +8,7 @@ export default function Routes(){
     return(
         <BrowserRouter>
             <Switch>
-                <Route path="/hunting-words" exact component={Main} />
+                <Route path="/hunting-words-game" exact component={Main} />
                 <Route path="/easy" exact component={Easy} />
             </Switch>
         </BrowserRouter>

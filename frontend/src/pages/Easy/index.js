@@ -6,11 +6,13 @@ import getWords from '../../utils/words';
 
 import generateLetterMatrix from '../../utils/generateLetterMatrix'
 
+import * as huntWord  from 'hunting-words';
+
 export default class Easy extends Component{
     
     state ={
         column: 30,
-        row: 10,
+        row: 30,
         matrix: [],
         positionSelected: [],
         words: []
@@ -21,7 +23,7 @@ export default class Easy extends Component{
         const { row, column } = this.state;
 
         this.setState({
-            matrix: generateLetterMatrix(column, row, getWords()),
+            matrix: huntWord.create(getWords().map((el) =>{return el.word}), row, column),
             words: getWords()
         });    
     }
@@ -31,7 +33,7 @@ export default class Easy extends Component{
 
         if(row != prevState.row || column != prevState.column)
             this.setState({
-                matrix: generateLetterMatrix(column, row, getWords()),
+                matrix: huntWord.create(getWords().map((el) =>{return el.word}), row, column),
             }); 
 
         if(this.state.words.filter((el)=>{return el.isFinded}).length == this.state.words.length)
@@ -65,9 +67,9 @@ export default class Easy extends Component{
         this.state.matrix
         .filter((row) =>{
             if(row.filter((el)=> { return el.word == word && el.selected;}).length > 0)
-                lettersSelected = row.filter((el)=> { return el.word == word && el.selected;});
+                lettersSelected = lettersSelected.concat( row.filter((el)=> { return el.word == word && el.selected;}));
         }); 
-
+        console.log(lettersSelected);
         return lettersSelected;
     }
 
@@ -76,9 +78,11 @@ export default class Easy extends Component{
         if(word){
             let lettersSelected = this.getLetterSelectedSameWord(word)
             if(lettersSelected.length == word.length){
-                let wordsAux = this.state.words;
+                let wordsAux = this.state.words.map((el)=>{
+                   return {'word':el.word, 'isFinded':(el.word == word)? true : el.isFinded}
+                });
                 
-                wordsAux[lettersSelected[0].wordIndex].isFinded = true;
+                //wordsAux[lettersSelected[0].wordIndex].isFinded = true;
 
                 this.setState({
                     words: wordsAux
