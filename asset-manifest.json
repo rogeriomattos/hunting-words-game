@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/hunting-words-game/static/css/main.05a223fa.chunk.css",
-    "main.js": "/hunting-words-game/static/js/main.df4771c5.chunk.js",
-    "main.js.map": "/hunting-words-game/static/js/main.df4771c5.chunk.js.map",
+    "main.js": "/hunting-words-game/static/js/main.d6249e06.chunk.js",
+    "main.js.map": "/hunting-words-game/static/js/main.d6249e06.chunk.js.map",
     "runtime-main.js": "/hunting-words-game/static/js/runtime-main.04afb23d.js",
     "runtime-main.js.map": "/hunting-words-game/static/js/runtime-main.04afb23d.js.map",
-    "static/js/2.87ab8b08.chunk.js": "/hunting-words-game/static/js/2.87ab8b08.chunk.js",
-    "static/js/2.87ab8b08.chunk.js.map": "/hunting-words-game/static/js/2.87ab8b08.chunk.js.map",
+    "static/js/2.b1fd532b.chunk.js": "/hunting-words-game/static/js/2.b1fd532b.chunk.js",
+    "static/js/2.b1fd532b.chunk.js.map": "/hunting-words-game/static/js/2.b1fd532b.chunk.js.map",
     "index.html": "/hunting-words-game/index.html",
-    "precache-manifest.802ec6f8d66ed81c75699d30bc12103f.js": "/hunting-words-game/precache-manifest.802ec6f8d66ed81c75699d30bc12103f.js",
+    "precache-manifest.36e68f87f9e1e259d6ff68032ab23f62.js": "/hunting-words-game/precache-manifest.36e68f87f9e1e259d6ff68032ab23f62.js",
     "service-worker.js": "/hunting-words-game/service-worker.js",
     "static/css/main.05a223fa.chunk.css.map": "/hunting-words-game/static/css/main.05a223fa.chunk.css.map",
-    "static/js/2.87ab8b08.chunk.js.LICENSE.txt": "/hunting-words-game/static/js/2.87ab8b08.chunk.js.LICENSE.txt"
+    "static/js/2.b1fd532b.chunk.js.LICENSE.txt": "/hunting-words-game/static/js/2.b1fd532b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.04afb23d.js",
-    "static/js/2.87ab8b08.chunk.js",
+    "static/js/2.b1fd532b.chunk.js",
     "static/css/main.05a223fa.chunk.css",
-    "static/js/main.df4771c5.chunk.js"
+    "static/js/main.d6249e06.chunk.js"
   ]
 }
