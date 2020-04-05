@@ -16,10 +16,17 @@ const styles = StyleSheet.create({
     },
 
     word:{
-        fontSize:20,
+        fontSize:30,
+    },
+
+    wordSelected: {
+        fontSize:30,
+        textDecorationLine:'line-through'
     },
 
     wordBoard: {
+        paddingVertical:10,
+        paddingHorizontal: 5,
         backgroundColor:"#ccc",
         width:"100%"
     },
@@ -29,16 +36,30 @@ const styles = StyleSheet.create({
     },
     
     letter:{
-        padding:10
+        
     },
 
-    letterText: {
-        fontSize:15,
-        lineHeight:15,
-        width:15,
-        height:15,
+    letterText: {  
+        paddingHorizontal:5,
+        fontSize:30,
+        lineHeight:38,
+        width:35,
+        height:35,
+        textAlignVertical:'center',
         textAlign:'center'
-    }
+    },
+
+    letterTextSelected:{
+        backgroundColor:"#000",
+        color: "#fff",
+        paddingHorizontal:5,
+        fontSize:30,
+        lineHeight:35,
+        width:35,
+        height:35,
+        textAlignVertical:'center',
+        textAlign:'center'
+    },
 
 });
 

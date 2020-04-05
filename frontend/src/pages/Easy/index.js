@@ -67,7 +67,7 @@ export default class Easy extends Component{
             if(row.filter((el)=> { return el.word == word && el.selected;}).length > 0)
                 lettersSelected = lettersSelected.concat( row.filter((el)=> { return el.word == word && el.selected;}));
         }); 
-        console.log(lettersSelected);
+        
         return lettersSelected;
     }
 
@@ -75,12 +75,11 @@ export default class Easy extends Component{
         
         if(word){
             let lettersSelected = this.getLetterSelectedSameWord(word)
+            
             if(lettersSelected.length == word.length){
                 let wordsAux = this.state.words.map((el)=>{
                    return {'word':el.word, 'isFinded':(el.word == word)? true : el.isFinded}
                 });
-                
-                //wordsAux[lettersSelected[0].wordIndex].isFinded = true;
 
                 this.setState({
                     words: wordsAux
