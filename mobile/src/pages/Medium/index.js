@@ -2,14 +2,12 @@ import React from 'react';
 import { Text, View, Touchable, FlatList,TouchableOpacity, ScrollView } from 'react-native';
 import styles from './styles';
 import * as huntWord from 'hunting-words';
+import words from '../../data/words';
 
-export class Easy extends React.Component {
+export class Medium extends React.Component {
 
     state ={
-        words: [ 
-                {word: "Rogerio", isFinded: false},
-                
-            ],
+        words: words.medium,
         matrix : []
     };
 
@@ -17,14 +15,12 @@ export class Easy extends React.Component {
         const { words } = this.state;
 
 
-        if(words.filter((el)=>{return el.isFinded}).length == words.length)
+        if(words.length &&  words.filter((el)=>{return el.isFinded}).length == words.length)
             alert("Parabéns você encontrou todas as palavras");
     }
 
     componentDidMount(){
-        this.setState({
-            matrix: huntWord.create(this.state.words.map((el) =>( el.word)) ,10,10)
-        })
+        this.load();
     }
 
     getLetterSelectedSameWord = (word) =>{
@@ -57,12 +53,10 @@ export class Easy extends React.Component {
            
     }
 
-    reload = () =>{
+    load = () =>{
         this.setState({
-            matrix: huntWord.create(this.state.words.map((el) =>( el.word)) ,10,10),
-            word:[ 
-                {word: "Rogerio", isFinded: false},
-            ] 
+            matrix: huntWord.create(this.state.words.map((el) =>( el.word)) ,15,15),
+            word: words.medium
         }); 
     }
     
@@ -110,7 +104,7 @@ export class Easy extends React.Component {
                     ))}
                 </View>
                 <View>
-                <TouchableOpacity onPress={this.reload}><Text> Reload </Text></TouchableOpacity>
+                    <TouchableOpacity onPress={this.load}><Text> Reload </Text></TouchableOpacity>
                 </View>
             </ScrollView>
         );

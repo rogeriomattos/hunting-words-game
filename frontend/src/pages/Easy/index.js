@@ -101,9 +101,7 @@ export default class Easy extends Component{
         });
 
         this.verifyFindWord(joined[indexRow][indexColumn].word);
-    } 
-
-    
+    }     
 
     render(){
         const { words, matrix } = this.state;
@@ -123,7 +121,7 @@ export default class Easy extends Component{
                         <ul key={'row' + indexRow}>
                             {row.map((item, indexColumn) => (
                                 <li 
-                                    className={(item.selected)? "selected" : ""}
+                                    className={(item.word)? "selected" : ""}
                                     key={'column' + indexColumn} 
                                     onClick={()=>{this.selectLetter(indexRow, indexColumn)}} 
                                 >

@@ -13,7 +13,7 @@ export default function Main(){
     }
 
     function navigateToMediumLevel(){
-        navigate.navigate('Easy');
+        navigate.navigate('Medium');
     }
 
     function navigateToHardLevel(){
