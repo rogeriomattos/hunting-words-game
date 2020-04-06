@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, Touchable, FlatList,TouchableOpacity, ScrollView } from 'react-native';
+import { Text, View, TouchableWithoutFeedback, FlatList,TouchableOpacity, ScrollView } from 'react-native';
 import styles from './styles';
 import * as huntWord from 'hunting-words';
 import words from '../../data/words';
@@ -88,9 +88,9 @@ export class Medium extends React.Component {
                                 {row.map((column)=>{
                                     columnIndex++;
                                     return(
-                                        <TouchableOpacity key={columnIndex+"column"} style={styles.letter} onPress={()=>{this.selectLetter(column.row, column.column)}}>
+                                        <TouchableWithoutFeedback key={columnIndex+"column"} style={styles.letter} onPress={()=>{this.selectLetter(column.row, column.column)}}>
                                             <Text style={(column.selected)? styles.letterTextSelected : styles.letterText}>{column.letter.toUpperCase()}</Text>
-                                        </TouchableOpacity>
+                                        </TouchableWithoutFeedback>
                                     );
                                 })}
                             </View>
