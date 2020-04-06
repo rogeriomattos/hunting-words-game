@@ -106,7 +106,7 @@ export default class Easy extends Component{
     
 
     render(){
-        const { words, matrix, column, row, positionSelected } = this.state;
+        const { words, matrix } = this.state;
         
         return(
             <div className="easy-container">
