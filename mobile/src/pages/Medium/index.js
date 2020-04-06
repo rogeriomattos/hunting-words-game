@@ -56,7 +56,7 @@ export class Medium extends React.Component {
     load = () =>{
         this.setState({
             matrix: huntWord.create(this.state.words.map((el) =>( el.word)) ,15,15),
-            word: words.medium
+            words: words.medium
         }); 
     }
     

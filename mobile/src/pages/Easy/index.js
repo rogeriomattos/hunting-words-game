@@ -60,7 +60,7 @@ export class Easy extends React.Component {
     reload = () =>{
         this.setState({
             matrix: huntWord.create(this.state.words.map((el) =>( el.word)) ,10,10),
-            word:[ 
+            words:[ 
                 {word: "Rogerio", isFinded: false},
             ] 
         }); 
