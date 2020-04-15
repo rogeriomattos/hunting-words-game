@@ -12,7 +12,7 @@ export default class Easy extends Component{
         columns: 10,
         rows: 10,
         game: new createGame(0, 0, []),
-        words: ["Teste","Teste","Teste","Teste","Teste","Teste","Teste","Teste"]
+        words: ["word1","word2","word3"]
     };
 
     constructor(props){
@@ -62,7 +62,7 @@ export default class Easy extends Component{
 
     render(){
         const { rows, columns, board } = this.state.game;
-        
+        console.log(this.state.game);
         return(
             <div>
                 <h1>Easy</h1>
