@@ -1,8 +1,10 @@
 .easy-container{
-    width: 100%;
-    max-width: 1180px;
-    padding: 0 30px;
+    
+    padding: 24px;
     margin: 32px auto;
+    border: 1px solid #ccc;
+    background: #FFF;
+    display: table;
 }
 
 .easy-container header {
@@ -50,7 +52,7 @@
 
 .easy-container .words{
     max-width: 80%;
-    margin: 24px auto auto;
+    margin: 0 auto;
     text-align: center;
 }
 .easy-container .words span{

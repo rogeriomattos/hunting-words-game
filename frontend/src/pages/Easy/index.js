@@ -7,7 +7,7 @@ import getWords from '../../utils/words';
 import { createGame } from 'hunting-words';
 
 export default class Easy extends Component{
-    
+
     state ={
         columns: 10,
         rows: 10,
@@ -31,50 +31,53 @@ export default class Easy extends Component{
         this.state.game.board
         .filter((row) =>{
             lettersSelected = lettersSelected + row.filter((el)=> { return el.word == word && el.isSelected;}).length;
-        }); 
-        
+        });
+
         return lettersSelected;
     }
 
     verifyFindWord = (words) =>{
-        
+
         for(let word of words){
 
             let lettersSelected = this.getLetterSelectedSameWord(word)
-            
+
             if(lettersSelected == word.length){
-                alert("Você achou a palavra: " + word);                
+                alert("Você achou a palavra: " + word);
             }
-        }   
+        }
     }
 
     selectLetter = (item) =>{
         let game = this.state.game;
-        
+
         game.board[item.row][item.column].setIsSelected(!item.isSelected);
 
         this.setState({
-           game: game 
+           game: game
         });
 
         this.verifyFindWord(item.word);
     }
 
     render(){
-        const { rows, columns, board } = this.state.game;
-        console.log(this.state.game);
+        const { rows, columns, board, words } = this.state.game;
+        console.log(words);
         return(
             <div>
-                <h1>Easy</h1>
-                
                 <div className="easy-container">
+                    <div className="words">    
+                        {words.map(( word , index)=> (
+                            <span key={word + index} className={""}>{word}</span>
+                        ))}
+                    </div>
                     <div className="word-board">
                         {board.map((row, indexRow)=>(
                             <ul key={'row' + indexRow}>
                                 {row.map((column, indexColumn)=>(
-                                    <li 
+                                    <li
                                         className={(column.isSelected)? "selected" : ""}
-                                        key={'column' + indexColumn} 
+                                        key={'column' + indexColumn}
                                         onClick={()=>{ this.selectLetter(column) }}
                                     >
                                         {column.letter}
@@ -82,7 +85,7 @@ export default class Easy extends Component{
                                 ))}
                             </ul>
                         ))}
-                            
+
                     </div>
                 </div>
             </div>
@@ -95,7 +98,7 @@ export default class Easy extends Component{
     //     this.setState({
     //         matrix: huntWord.create(getWords().map((el) =>{return el.word}), row, column),
     //         words: getWords()
-    //     });    
+    //     });
     // }
 
     // componentDidUpdate(prevProps, prevState){
@@ -104,7 +107,7 @@ export default class Easy extends Component{
     //     if(row != prevState.row || column != prevState.column)
     //         this.setState({
     //             matrix: huntWord.create(getWords().map((el) =>{return el.word}), row, column),
-    //         }); 
+    //         });
 
     //     if(this.state.words.filter((el)=>{return el.isFinded}).length == this.state.words.length)
     //         alert("Parabéns você encontrou todas as palavras");
@@ -112,7 +115,7 @@ export default class Easy extends Component{
 
     // toScrambleTtheLetters = () => {
     //     const { row, column } = this.state;
-        
+
     //     this.setState({
     //         matrix: huntWord.create(getWords().map((el) =>{return el.word}), row, column),
     //     });
@@ -122,7 +125,7 @@ export default class Easy extends Component{
     // cleanWords = () =>{
     //     const w = this.state.words.map(({word}) => {
     //         return {
-    //             'word': word, 
+    //             'word': word,
     //             'isFinded': false
     //         };
     //     });
@@ -138,16 +141,16 @@ export default class Easy extends Component{
     //     .filter((row) =>{
     //         if(row.filter((el)=> { return el.word == word && el.selected;}).length > 0)
     //             lettersSelected = lettersSelected.concat( row.filter((el)=> { return el.word == word && el.selected;}));
-    //     }); 
-        
+    //     });
+
     //     return lettersSelected;
     // }
 
     // verifyFindWord = (word) =>{
-        
+
     //     if(word){
     //         let lettersSelected = this.getLetterSelectedSameWord(word)
-            
+
     //         if(lettersSelected.length == word.length){
     //             let wordsAux = this.state.words.map((el)=>{
     //                return {'word':el.word, 'isFinded':(el.word == word)? true : el.isFinded}
@@ -158,14 +161,14 @@ export default class Easy extends Component{
     //             });
     //         }
     //     }
-           
+
     // }
 
     // selectLetter = (indexRow, indexColumn) =>{
     //     const { matrix } = this.state;
 
     //     var joined = matrix;
-        
+
     //     joined[indexRow][indexColumn].selected = !matrix[indexRow][indexColumn].selected;
 
     //     this.setState({
@@ -173,37 +176,37 @@ export default class Easy extends Component{
     //     });
 
     //     this.verifyFindWord(joined[indexRow][indexColumn].word);
-    // }     
+    // }
 
     // render(){
     //     const { words, matrix } = this.state;
-        
+
     //     return(
     //         <div className="easy-container">
     //             <div className="words">
     //                 {words.map(({word, isFinded}, index)=> (
-    //                     <span key={word + index} className={(isFinded)?"finded":""}>{word}</span>    
+    //                     <span key={word + index} className={(isFinded)?"finded":""}>{word}</span>
     //                 ))}
     //             </div>
-            
+
     //             <button type="button" onClick={this.toScrambleTtheLetters}>Embaralhar palavras</button>
-            
+
     //             <div className="word-board">
     //                 {matrix.map((row, indexRow) => (
     //                     <ul key={'row' + indexRow}>
     //                         {row.map((item, indexColumn) => (
-    //                             <li 
+    //                             <li
     //                                 className={(item.word)? "selected" : ""}
-    //                                 key={'column' + indexColumn} 
-    //                                 onClick={()=>{this.selectLetter(indexRow, indexColumn)}} 
+    //                                 key={'column' + indexColumn}
+    //                                 onClick={()=>{this.selectLetter(indexRow, indexColumn)}}
     //                             >
     //                                 {item.letter}
     //                             </li>
     //                         ))}
-    //                     </ul>    
+    //                     </ul>
     //                 ))}
     //             </div>
-               
+
     //         </div>
     //     );
     // }
