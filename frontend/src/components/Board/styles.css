@@ -1,0 +1,37 @@
+.word-board{
+    width: 100%;
+    margin-top: 24px;
+}
+
+ .word-board ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ .word-board ul li{
+    font-size: 16px;
+    cursor: pointer;
+    user-select: none;
+    box-sizing: border-box;
+    line-height: 50px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+ .word-board ul li.selected{
+    background: rgb(122, 122, 122);
+    color: #fff;
+}
+
+ .word-board ul li.selected:hover{
+    background: rgb(122, 122, 122);
+    color: #fff;
+}
+
+ .word-board ul li:hover{
+    background: #ccc;
+}
